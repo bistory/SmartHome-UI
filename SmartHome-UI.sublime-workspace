@@ -1,0 +1,579 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"toggle",
+				"toggleSelection"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"audience",
+				"audience_id"
+			],
+			[
+				"cri",
+				"criteria_index_id"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"Mercedes",
+				"Mercedes-Benz"
+			],
+			[
+				"facebook",
+				"facebook_criterias"
+			],
+			[
+				"int",
+				"interest"
+			],
+			[
+				"inte",
+				"interest"
+			],
+			[
+				"ids",
+				"ids_str"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"geol",
+				"geolocation"
+			],
+			[
+				"crite",
+				"criterion"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"audien",
+				"audience_id"
+			],
+			[
+				"audi",
+				"audience_input"
+			],
+			[
+				"facebook_audie",
+				"facebook_audience_id"
+			],
+			[
+				"is_nu",
+				"is_numeric"
+			],
+			[
+				"in",
+				"interests"
+			],
+			[
+				"audienc",
+				"audience_size"
+			],
+			[
+				"audie",
+				"audience_by_country"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"med",
+				"media_id"
+			],
+			[
+				"insta",
+				"instagram_accounts_users_counts"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 440.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/thomas/GitHub/SmartHome-UI"
+	],
+	"file_history":
+	[
+		"/Users/thomas/Projects/prime_radiant/public/partials/criteria/main.html",
+		"/Users/thomas/Projects/prime_radiant/public/partials/criteria/create.html",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp/app.coffee",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp - copie/app.coffee",
+		"/Users/thomas/Projects/prime_radiant/app/Library/Audiences/Genders.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/Audiences/Geolocations.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/Audiences/Interests.php",
+		"/Users/thomas/Projects/prime_radiant/app/Http/Controllers/CriteriaController.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/Audiences/Locales.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/Audiences/Educations.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/Audiences/Ages.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/Audiences/Demographics.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/GenInsert.php",
+		"/Users/thomas/Projects/prime_radiant/app/Jobs/CrawlAudience.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/Audiences/AbstractUpdate.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/Audiences/Size.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/AdAccountsHelper.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/AdAccountHelper.php",
+		"/Users/thomas/Projects/prime_radiant/resources/views/emails/crawl_end.blade.php",
+		"/Users/thomas/Projects/prime_radiant/resources/views/privateaudiences/listing.blade.php",
+		"/Users/thomas/Projects/prime_radiant/app/Http/Controllers/PrivateAudiencesController.php",
+		"/Users/thomas/Projects/prime_radiant/config/facebook.php",
+		"/Users/thomas/Projects/prime_radiant/app/Http/Controllers/InterestsController.php",
+		"/Users/thomas/Projects/prime_radiant/public/partials/criteria/edit.html",
+		"/Users/thomas/Projects/prime_radiant/public/index.html",
+		"/Users/thomas/Projects/prime_radiant/resources/assets/js/controllers.js",
+		"/Users/thomas/Projects/prime_radiant/app/Library/Audiences/All.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/AbstractUpdateCriteria.php",
+		"/Users/thomas/Projects/prime_radiant/resources/views/emails/crawl_failed.blade.php",
+		"/Users/thomas/Projects/prime_radiant/resources/assets/js/app.js",
+		"/Users/thomas/Projects/prime_radiant/resources/views/privateaudiences/mailing.blade.php",
+		"/Users/thomas/Projects/prime_radiant/resources/views/emails/private_audience.blade.php",
+		"/Users/thomas/Projects/prime_radiant/resources/views/privateaudiences/index.blade.php",
+		"/Users/thomas/Projects/prime_radiant/app/Http/routes.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/ShowCustomAudiences.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/AudienceHelper.php",
+		"/Users/thomas/Projects/prime_radiant/composer.json",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/TruncateAudience.php",
+		"/Users/thomas/Projects/prime_radiant/config/queue.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/CassandraQuick.php",
+		"/Users/thomas/Projects/prime_radiant/config/mail.php",
+		"/Users/thomas/Downloads/Soprism-1/src/views/index.jade",
+		"/Users/thomas/Projects/prime_radiant/config/services.php",
+		"/Users/thomas/Downloads/Soprism-1/src/views/includes/footer.jade",
+		"/Users/thomas/Projects/prime_radiant/.env",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/UpdateAllCriteria.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/CleanupCriteria.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/ValidateBehaviors.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/UpdateGeolocations.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/UpdateInterests.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/UpdateDemographics.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/UpdateEducations.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/UpdateLocales.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/UpdateGenders.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/UpdateAges.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/CreateCustomAudience.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/UpdateCustomAudience.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/AddCriteriaCSV.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/ImportCriteriaCSV.php",
+		"/Users/thomas/Projects/prime_radiant/.gitignore",
+		"/Users/thomas/Projects/prime_radiant/vendor/laravel/framework/src/Illuminate/Queue/Jobs/Job.php",
+		"/Users/thomas/Projects/prime_radiant/package.json",
+		"/Users/thomas/Projects/prime_radiant/vendor/laravel/framework/src/Illuminate/Queue/Connectors/RedisConnector.php",
+		"/Users/thomas/Projects/prime_radiant/app/Providers/AppServiceProvider.php",
+		"/Users/thomas/Projects/prime_radiant/vendor/laravel/framework/src/Illuminate/Queue/Queue.php",
+		"/Users/thomas/Projects/prime_radiant/vendor/laravel/framework/src/Illuminate/Queue/Failed/FailedJobProviderInterface.php",
+		"/Users/thomas/Projects/prime_radiant/config/cache.php",
+		"/Users/thomas/Projects/prime_radiant/config/database.php",
+		"/Users/thomas/Projects/prime_radiant/resources/views/errors/503.blade.php",
+		"/Users/thomas/Projects/prime_radiant/resources/views/emails/crawl_end.html",
+		"/Users/thomas/Projects/prime_radiant/bower.json",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp/modules/dashboard/dashboard.coffee",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp/index.jade",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp/modules/explore/views/index.jade",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp/modules/audiences/audiences.coffee",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp/modules/audiences/views/index.jade",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp/index.html",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp/modules/audiences/views/index.html",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp/modules/audiences/audiences.js",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp/modules/dashboard/views/index.jade",
+		"/Users/thomas/Projects/prime_dashboard/src/main/webapp/modules/dashboard/views/index.html",
+		"/Users/thomas/Projects/prime_radiant/resources/assets/sass/app.scss",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Kernel.php",
+		"/Users/thomas/Projects/prime_dashboard/install/vhost/testing.soprism.conf",
+		"/Users/thomas/Projects/prime_radiant/app/Http/Controllers/SuggestInterests.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/old/UpdateInterests.php",
+		"/Users/thomas/Projects/prime_radiant/app/Http/Controllers/BehaviorsController.php",
+		"/Users/thomas/Downloads/emails_mb.txt",
+		"/Users/thomas/Projects/prime_radiant/vendor/facebook/php-ads-sdk/src/FacebookAds/Object/AbstractCrudObject.php",
+		"/Users/thomas/Projects/prime_radiant/app/Library/TargetingHelper.php",
+		"/Users/thomas/Projects/prime_radiant/config/app.php",
+		"/Users/thomas/Downloads/modernizr-3.2.0.js",
+		"/Users/thomas/Projects/prime_radiant/app/Library/GeolocationsHelper.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/old/UpdateBehaviors.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/old/UpdateBehaviors2.php",
+		"/Users/thomas/Projects/prime_radiant/public/index.php",
+		"/Users/thomas/Projects/prime_radiant/server.php",
+		"/Users/thomas/Projects/prime_radiant/gulpfile.js",
+		"/Users/thomas/Downloads/geberit.txt",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/Inspire.php",
+		"/Users/thomas/Projects/prime_radiant/public/partials/interests/main.html",
+		"/Users/thomas/Projects/prime_radiant/resources/assets/js/charts.js",
+		"/Users/thomas/Projects/prime_radiant/app/Http/Controllers/DemographicsController.php",
+		"/Users/thomas/Projects/prime_radiant/app/Console/Commands/UpdateBehaviors.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateGenders.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateAges.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/AbstractUpdateCriteria.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateCustomAudience.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateDemographics.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateLocales.php",
+		"/Users/thomas/Projects/prime_radiant/public/js/app.js",
+		"/Users/thomas/Projects/prime_radiant/config/geolocations.php",
+		"/Users/thomas/Projects/prime-radiant/app/Library/AudienceHelper.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/CreateCustomAudiencePLV.php",
+		"/Users/thomas/Projects/prime-radiant/public/partials/extra/main.html",
+		"/Users/thomas/Downloads/PLV-file.txt",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/CreateCustomAudience.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateGeolocations.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/GenInsert.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateInterests.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateBehaviors.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Kernel.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateEducations.php",
+		"/Users/thomas/Projects/prime-radiant/config/broadcasting.php",
+		"/Users/thomas/Projects/prime-radiant/config/facebook.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateInterests2.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateDemographics2.php",
+		"/Users/thomas/Projects/prime-radiant/app/Console/Commands/UpdateBehaviors2.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/thomas/Projects/prime_radiant/app",
+			"/Users/thomas/Projects/prime_radiant"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"checkBehavior",
+			"country",
+			"language",
+			"NavigationCtrl",
+			"/criteria",
+			"CriteriaCtrl",
+			"/criteria",
+			"BE",
+			"audiences_statement",
+			"getCriteria",
+			"getRejectsCount",
+			"incrementRejects",
+			"getAdsAccount",
+			"->getAdsAccount(",
+			"getAdsAccount(",
+			"type",
+			"\\Set",
+			"Set",
+			"location",
+			"storeFromChildren",
+			"Request::",
+			"getAdsAccount",
+			"getAudiences",
+			"form",
+			"$session",
+			"getCriteriaCount",
+			"getAudienceName",
+			"argume",
+			"argu",
+			"argum",
+			"Cassandra",
+			"Uuid",
+			"ReachEstimateFields",
+			"Api",
+			"Config",
+			"AudienceHelper",
+			"Cassandra",
+			"CassandraQuick",
+			"AudienceHelper",
+			"Uuid",
+			"ReachEstimateFields",
+			"TargetingSearch",
+			"Api",
+			"Config",
+			"argument",
+			"parent",
+			"DispatchesJobs",
+			"Cassandra",
+			"Config",
+			"Uuid",
+			"OptimizationGoals",
+			"ReachEstimateFields",
+			"TargetingSearchTypes",
+			"TargetingSearch",
+			"AdAccount",
+			"session",
+			"$session",
+			"session",
+			"_getFamilies",
+			"AudienceHelper",
+			"console",
+			"KeyCache",
+			"{",
+			"{{",
+			"repeat",
+			"dashboard",
+			"AudiencesCtrl",
+			"audiences",
+			"controller",
+			"ng-controller",
+			"getReachEstimate",
+			"_user",
+			"audiences",
+			"    ",
+			"Blood",
+			"sugge",
+			"ea059dcb-584b-5cd0-9060-a6978261c239",
+			"\n",
+			"life_event",
+			"	",
+			"	\n",
+			"Travel profile	",
+			" 	Travel	",
+			"Favorite Pleasure",
+			"location",
+			"\n",
+			"type",
+			"type_facebook",
+			"NavigationCtrl",
+			"custom_audience",
+			";\n",
+			"ads_account",
+			"getAdsAccount",
+			"6003387418453",
+			"$this->session",
+			"AdAccount",
+			"try",
+			"->->",
+			"$session",
+			"path",
+			"$path",
+			"$location",
+			"\n",
+			"'",
+			"\n",
+			"  ",
+			"	  ",
+			"    ",
+			"->users",
+			"audience",
+			"appendToFutures",
+			"    ",
+			"['targeting_spec']",
+			"    ",
+			"$session",
+			"    ",
+			"$session",
+			"    ",
+			"angular",
+			"    ",
+			"\n",
+			"178bc553-445b-4beb-8df2-be7ee88f24e7",
+			"\n",
+			"'",
+			"\n",
+			" MAIL",
+			"ncy.decoster@teleflex.com",
+			"@NOMAIL.COM"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$request->",
+			"	",
+			"',\n'",
+			"travel",
+			"', '",
+			"'], {6005232221572: 'New relationship'}, false, dateof(now()));\n",
+			"'Travel profile', '",
+			"'Travel profile', ",
+			" 'Travel', ",
+			"INSERT INTO soprism_prime_radiant.facebook_criteria_index (id, type, name, description, path, facebook_criterias, hide, updated_at)\nVALUES (now(), 'life_event', 'New relationship', 'People newly engaged in a relationship.', ['Favorite Pleasure', ",
+			"INSERT INTO soprism_prime_radiant.facebook_criteria_index (id, type, name, description, path, facebook_criterias, hide, updated_at)\nVALUES (now(), 'life_event', 'New relationship', 'People newly engaged in a relationship.', ['",
+			"',\n'",
+			"	",
+			"		",
+			"	",
+			"$this->session",
+			"	",
+			"',\n'",
+			"",
+			"',\n'",
+			"",
+			"soprism_prime_radiant.facebook_criteria",
+			";",
+			"DELETE FROM facebook_criteria WHERE id=",
+			";",
+			"",
+			"soprism_prime_radiant.facebook_criteria",
+			"WHERE id=$1 AND user_id=$2;",
+			"",
+			"DELETE FROM ",
+			"',\n'",
+			"",
+			"',\n'",
+			"\n",
+			"',\n'",
+			"",
+			"',\n'",
+			"",
+			", ",
+			"foreach(",
+			"	",
+			"},\n{\"metadata",
+			"	",
+			".fields(name,likes)",
+			"pages_posts",
+			"SELECT `pages_objects_comments`.`object_id`, `pages_objects_comments`.`user_id`, REPLACE(`pages_objects_comments`.`message`, '\\n', ' '), `pages_objects_comments`.`sentiment`, `pages_objects_comments`.`language`, REPLACE(`pages_objects`.`name`, '\\n', ' '), REPLACE(`pages_objects`.`message`, '\\n', ' '), `pages_objects`.`language`, `pages_objects`.`type` FROM `pages_objects_comments`",
+			", ",
+			"",
+			", "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "SmartHome-UI.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"resources/assets/js/controllers.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 213.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
