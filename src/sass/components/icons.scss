@@ -15,6 +15,10 @@
   @include size(70%, 70%);
 }
 
+.icon-large::before {
+  font-size: 1980%;
+}
+
 .icon-photovoltaic:before { content: "\EA01" }
 .icon-thermometer:before { content: "\EA02" }
 .icon-battery-0:before { content: "\EA03" }

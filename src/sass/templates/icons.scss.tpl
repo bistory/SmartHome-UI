@@ -15,5 +15,9 @@
   @include size(70%, 70%);
 }
 
+.icon-large::before {
+  font-size: 1980%;
+}
+
 <% _.each(glyphs, function(glyph) { %>.<%= prefix %><%= glyph.name %>:before { content: "\<%= glyph.codepoint.toString(16).toUpperCase() %>" }
 <% }); %>

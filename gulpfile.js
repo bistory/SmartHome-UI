@@ -107,12 +107,12 @@ gulp.task('build:icons', () => {
       gulp.src(srcPath + '/sass/templates/icons.scss.tpl')
         .pipe(consolidate('lodash', options))
         .pipe(rename('icons.scss'))
-        .pipe(gulp.dest(srcPath + '/scss/components'));
+        .pipe(gulp.dest(srcPath + '/sass/components'));
     })
     .pipe(gulp.dest(srcPath + '/assets/fonts/Icons'));
 });
 
-gulp.task('build', ['clean', 'js', 'scss', 'templatecache', 'copy'], () => {
+gulp.task('build', ['js', 'scss', 'templatecache', 'copy'], () => {
   return gulp.src(buildPath + '/index.html')
     .pipe(usemin({
       css: [

@@ -6,20 +6,34 @@ html
   body(ng-app='SmartHome')
     div
       md-grid-list.tile(md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px")
-        md-grid-tile.tile-light-blue(md-rowspan="2" md-colspan="2" md-colspan-sm="1")
-          div.icon-humidity.icon-large
-          md-grid-tile-footer
-            h3 14°C
-        md-grid-tile.tile-blue
-          md-grid-tile-footer
-            h3 52%
-        md-grid-tile.tile-green
+        md-grid-tile.tile.tile-light-blue(md-rowspan="2" md-colspan="2" md-colspan-sm="1")
+          div(layout="column")
+            div(layout="row" layout-align="center center")
+              div.highlight(flex) 14°C
+              div(flex)
+                img(src="assets/icons/thermometer.svg" style="width: 70%")
+            div(style="height: 24px")
+            div(layout="row" layout-align="center center")
+              div.highlight(flex) 47%
+              div(flex)
+                img(src="assets/icons/humidity.svg" style="width: 70%")
+        md-grid-tile.tile.tile-green
+          div(layout="column")
+            div.highlight(flex) Eco mode
+            div(flex)
+              img(src="assets/icons/eco.svg" style="width: 40%")
+        md-grid-tile.tile.tile-blue
+          div(layout="column")
+            div.highlight(flex) 52%
+            div(flex)
+              img(src="assets/icons/water.svg" style="width: 70%")
+        md-grid-tile.tile.tile-green
           md-grid-tile-header
             h3 Wemo device
           | Test
           md-grid-tile-footer
             h3 3,42kWh
-        md-grid-tile.tile-red
+        md-grid-tile.tile.tile-red
           md-grid-tile-header
             h3 Wemo device
           | Test

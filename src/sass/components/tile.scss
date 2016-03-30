@@ -1,3 +1,12 @@
+.tile {
+  color: color(white);
+  text-align: center;
+
+  .highlight {
+    font-size: 3em;
+  }
+}
+
 @each $color-title, $color in $default-colors {
   .tile-#{$color-title} {
     background: $color;
