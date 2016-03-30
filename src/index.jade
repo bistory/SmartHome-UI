@@ -2,9 +2,29 @@ doctype html
 html
   head
     meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
-    link(rel='stylesheet', href='/node_modules/angular-material/angular-material.css')
+    link(rel='stylesheet', href='app.css')
   body(ng-app='SmartHome')
-    div(ng-controller='YourController')
+    div
+      md-grid-list.tile(md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px")
+        md-grid-tile.tile-light-blue(md-rowspan="2" md-colspan="2" md-colspan-sm="1")
+          div.icon-humidity.icon-large
+          md-grid-tile-footer
+            h3 14°C
+        md-grid-tile.tile-blue
+          md-grid-tile-footer
+            h3 52%
+        md-grid-tile.tile-green
+          md-grid-tile-header
+            h3 Wemo device
+          | Test
+          md-grid-tile-footer
+            h3 3,42kWh
+        md-grid-tile.tile-red
+          md-grid-tile-header
+            h3 Wemo device
+          | Test
+          md-grid-tile-footer
+            h3 3,42kWh
 
     // build:js ./libs.js
     script(src='../bower_components/lodash/lodash.js')
@@ -12,6 +32,7 @@ html
     script(src='../bower_components/angular-aria/angular-aria.js')
     script(src='../bower_components/angular-animate/angular-animate.js')
     script(src='../bower_components/angular-material/angular-material.js')
+    script(src='../bower_components/angular-ui-router/release/angular-ui-router.js')
     // endbuild
     // build:jsApp ./app.js
     script(src="app.js")

@@ -1,0 +1,5 @@
+@each $color-title, $color in $default-colors {
+  .tile-#{$color-title} {
+    background: $color;
+  }
+}

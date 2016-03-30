@@ -8,21 +8,19 @@ const gulp = require('gulp');
 const del = require('del');
 const prefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
-const typescript = require('gulp-typescript');
 const jade = require('gulp-jade');
 const sourceMaps = require('gulp-sourcemaps');
 const angularTemplatecache = require('gulp-angular-templatecache');
 const ngAnnotate = require('gulp-ng-annotate');
 const iconfont = require('gulp-iconfont');
 const consolidate = require('gulp-consolidate');
+const rename = require('gulp-rename');
 const rev = require('gulp-rev');
-const replace = require('gulp-replace');
 const uglify = require('gulp-uglify');
 const cssnano = require('gulp-cssnano');
 const htmlmin = require('gulp-htmlmin');
 const usemin = require('gulp-usemin');
 const webserver = require('gulp-webserver');
-const notify = require('gulp-notify');
 
 // Configuration
 // =============================================================================
@@ -33,52 +31,37 @@ const buildPath = 'build';
 // Compilations
 // =============================================================================
 
-gulp.task('sass', () => {
-  return gulp.src('src/main/app.sass')
+gulp.task('scss', () => {
+  return gulp.src(srcPath + '/app.scss')
     .pipe(sass())
     .pipe(prefixer({
-      browsers: ['> 1%', 'IE 8'],
+      browsers: ['> 1%'],
       cascade: true
     }))
-    .pipe(gulp.dest('build/dev'));
+    .pipe(gulp.dest(buildPath));
 });
 
-gulp.task('css', () => {
-  return gulp.src('src/main/scss/main.scss')
-    .pipe(sourceMaps.init())
-    .pipe(sass())
-    .pipe(prefixer({
-      browsers: ['> 1%', 'IE 8'],
-      cascade: true
-    }))
-    .pipe(sourceMaps.write('.'))
-    .pipe(gulp.dest('build/dev/css'));
-});
-
-gulp.task('ts', () => {
-  return gulp.src(['src/main/**/*.ts', '!src/main/_all.ts'], {
-      base: 'src/main'
+gulp.task('js', () => {
+  return gulp.src([srcPath + '/*.js', srcPath + '/**/*.js'], {
+      base: srcPath
     })
-    .pipe(typescript({
-      target: 'ES5'
-    }))
-    .pipe(gulp.dest('build/dev'));
+    .pipe(gulp.dest(buildPath));
 });
 
 gulp.task('jade', () => {
-  return gulp.src(['src/main/modules/**/*.jade', 'src/main/index.jade', 'src/main/views/*.jade'], {
-      base: 'src/main'
+  return gulp.src([srcPath + '/modules/**/*.jade', srcPath + '/index.jade', srcPath + '/views/*.jade'], {
+      base: srcPath
     })
     .pipe(jade({
       pretty: true
     }))
-    .pipe(gulp.dest('build/dev'));
+    .pipe(gulp.dest(buildPath));
 });
 
 gulp.task('templatecache', ['jade'], () => {
   return gulp.src([
-      'build/dev/modules/**/*.html',
-      'build/dev/views/**/*.html'
+      buildPath + '/modules/**/*.html',
+      buildPath + '/views/**/*.html'
     ])
     .pipe(htmlmin({
       collapseWhitespace: true,
@@ -95,7 +78,7 @@ gulp.task('templatecache', ['jade'], () => {
         return 'views/' + url;
       }
     }))
-    .pipe(gulp.dest('build/dev'));
+    .pipe(gulp.dest(buildPath));
 });
 
 
@@ -103,8 +86,7 @@ gulp.task('templatecache', ['jade'], () => {
 // =============================================================================
 
 gulp.task('build:icons', () => {
-  return gulp.src('src/main/icons/**/*.svg')
-    //.pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
+  return gulp.src(srcPath + '/icons/**/*.svg')
     .pipe(iconfont({
       fontName: 'Icons',
       formats: ['svg', 'ttf', 'eot', 'woff'],
@@ -122,17 +104,16 @@ gulp.task('build:icons', () => {
         fontPath: '../fonts/', // set path to font (from your CSS file if relative)
         prefix: 'icon-' // set class name in your CSS
       };
-      gulp.src('src/main/icons/**/*.svg')
-        //.pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
+      gulp.src(srcPath + '/sass/templates/icons.scss.tpl')
         .pipe(consolidate('lodash', options))
-        .pipe(rename('src/main/assets/fonts'))
-        .pipe(gulp.dest('src/main/assets/fonts'));
+        .pipe(rename('icons.scss'))
+        .pipe(gulp.dest(srcPath + '/scss/components'));
     })
-    .pipe(gulp.dest('build/dev/Icons'));
+    .pipe(gulp.dest(srcPath + '/assets/fonts/Icons'));
 });
 
-gulp.task('build:prod', ['clean:prod', 'sass', 'css', 'ts', 'templatecache', 'copy:prod'], () => {
-  return gulp.src('build/dev/index.html')
+gulp.task('build', ['clean', 'js', 'scss', 'templatecache', 'copy'], () => {
+  return gulp.src(buildPath + '/index.html')
     .pipe(usemin({
       css: [
         () => {
@@ -147,9 +128,6 @@ gulp.task('build:prod', ['clean:prod', 'sass', 'css', 'ts', 'templatecache', 'co
         rev
       ],
       jsApp: [
-        () => {
-          return replace('http://localhost:8081', 'https://api-beta.soprism.com');
-        },
         ngAnnotate,
         uglify,
         rev
@@ -164,58 +142,38 @@ gulp.task('build:prod', ['clean:prod', 'sass', 'css', 'ts', 'templatecache', 'co
         })
       ]
     }))
-    .pipe(gulp.dest('build/prod'));
+    .pipe(gulp.dest(buildPath));
 });
 
-gulp.task('copy:dev', () => {
+gulp.task('copy', ['templatecache'], () => {
   return gulp.src([
-      'src/main/favicon.ico',
-      'src/main/ie10-viewport-bug-workaround.js',
-      'src/main/bower_components/**/*',
-      'src/main/assets/**/*',
-      'src/main/static/**/*'
+      srcPath + '/bower_components/**/*',
+      srcPath + '/assets/**/*',
+      srcPath + '/static/**/*'
     ], {
-      base: 'src/main'
+      base: srcPath
     })
-    .pipe(gulp.dest('build/dev'));
+    .pipe(gulp.dest(buildPath));
 });
 
-gulp.task('copy:prod', ['templatecache'], () => {
-  return gulp.src([
-      'src/main/favicon.ico',
-      'src/main/ie10-viewport-bug-workaround.js',
-      'src/main/bower_components/**/*',
-      'src/main/assets/**/*',
-      'src/main/static/**/*'
-    ], {
-      base: 'src/main'
-    })
-    .pipe(gulp.dest('build/prod'));
+gulp.task('clean', () => {
+  return del([buildPath + '/**/*']);
 });
 
-gulp.task('clean:dev', () => {
-  return del(['build/dev/**/*']);
-});
-
-gulp.task('clean:prod', () => {
-  return del(['build/prod/**/*']);
-});
-
-gulp.task('watch', ['copy:dev', 'sass', 'css', 'ts', 'templatecache'], () => {
-  gulp.watch('src/main/**/*.ts', ['ts']);
-  gulp.watch(['src/main/app.sass', 'src/main/modules/**/*.sass', 'src/main/**/*.scss'], ['sass']);
-  gulp.watch(['src/main/**/*.sass', 'src/main/**/*.scss'], ['css']);
-  gulp.watch('src/main/**/*.jade', ['templatecache']);
+gulp.task('watch', ['build'], () => {
+  //gulp.watch([srcPath + '/app.scss', srcPath + '/modules/**/*.scss', srcPath + '/**/*.scss'], ['scss']);
+  //gulp.watch(srcPath + '/**/*.jade', ['templatecache']);
+  gulp.watch([srcPath + '/app.scss', srcPath + '/modules/**/*.scss', srcPath + '/**/*.scss', srcPath + '/**/*.jade'], ['build']);
 });
 
 gulp.task('webserver', ['watch'], () => {
-  return gulp.src('build/dev').pipe(webserver({
+  return gulp.src(buildPath).pipe(webserver({
     livereload: {
       enable: true,
       filter: filename => {
         if (filename.match(/node_modules/)) {
           return false;
-        } else if (filename.match(/(\.ts|\.sass|\.jade)$/)) {
+        } else if (filename.match(/(\.js|\.scss|\.jade)$/)) {
           return false;
         } else {
           return true;
