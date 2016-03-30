@@ -4,9 +4,9 @@ html
     meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
     link(rel='stylesheet', href='app.css')
   body(ng-app='SmartHome')
-    div
+    div#main
       md-grid-list.tile(md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px")
-        md-grid-tile.tile.tile-light-blue(md-rowspan="2" md-colspan="2" md-colspan-sm="1")
+        md-grid-tile.tile.large.tile-light-blue(md-rowspan="2" md-colspan="2" md-colspan-sm="1")
           div(layout="column")
             div(layout="row" layout-align="center center")
               div.highlight(flex) 14°C
@@ -17,15 +17,15 @@ html
               div.highlight(flex) 47%
               div(flex)
                 img(src="assets/icons/humidity.svg" style="width: 70%")
-        md-grid-tile.tile.tile-green
+        md-grid-tile.tile.eco.tile-green
           div(layout="column")
             div.highlight(flex) Eco mode
             div(flex)
               img(src="assets/icons/eco.svg" style="width: 40%")
-        md-grid-tile.tile.tile-blue
+        md-grid-tile.tile.water-tank.tile-blue
           div(layout="column")
             div.highlight(flex) 52%
-            div(flex)
+            div.icon(flex)
               img(src="assets/icons/water.svg" style="width: 70%")
         md-grid-tile.tile.tile-green
           md-grid-tile-header

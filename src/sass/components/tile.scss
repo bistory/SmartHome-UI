@@ -1,9 +1,41 @@
 .tile {
+  font-family: 'Roboto', sans-serif;
   color: color(white);
   text-align: center;
 
   .highlight {
-    font-size: 3em;
+    font-size: 2em;
+  }
+
+  .large {
+    .highlight {
+      font-size: 3em;
+    }
+  }
+
+  // Eco tile
+  &.eco {
+    .highlight {
+      margin-bottom: 20px;
+    }
+  }
+
+  // Water tank tile
+  &.water-tank {
+    &>div {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight {
+      position: absolute;
+      width: 100%;
+      top: 70px;
+    }
+
+    .icon {
+      margin-top: 80px;
+    }
   }
 }
 
