@@ -16,7 +16,7 @@
   // Eco tile
   &.eco {
     .highlight {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
   }
 
@@ -35,6 +35,18 @@
 
     .icon {
       margin-top: 80px;
+    }
+  }
+
+  &.photovoltaic {
+    .highlight {
+      margin-bottom: 16px;
+    }
+  }
+
+  &.heating {
+    .highlight {
+      margin-bottom: 24px;
     }
   }
 }

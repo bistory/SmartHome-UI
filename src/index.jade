@@ -5,8 +5,8 @@ html
     link(rel='stylesheet', href='app.css')
   body(ng-app='SmartHome')
     div#main
-      md-grid-list.tile(md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px")
-        md-grid-tile.tile.large.tile-light-blue(md-rowspan="2" md-colspan="2" md-colspan-sm="1")
+      md-grid-list.tile(md-cols-xs="2" md-cols-sm="4" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="8px")
+        md-grid-tile.tile.large.tile-light-blue(md-rowspan="2" md-colspan="2" md-colspan-sm="2")
           div(layout="column")
             div(layout="row" layout-align="center center")
               div.highlight(flex) 14°C
@@ -27,18 +27,17 @@ html
             div.highlight(flex) 52%
             div.icon(flex)
               img(src="assets/icons/water.svg" style="width: 70%")
-        md-grid-tile.tile.tile-green
-          md-grid-tile-header
-            h3 Wemo device
-          | Test
-          md-grid-tile-footer
-            h3 3,42kWh
-        md-grid-tile.tile.tile-red
-          md-grid-tile-header
-            h3 Wemo device
-          | Test
-          md-grid-tile-footer
-            h3 3,42kWh
+        md-grid-tile.tile.photovoltaic.tile-amber
+          div(layout="column")
+            div.highlight(flex) 0,98kWh
+            div.icon(flex)
+              img(src="assets/icons/photovoltaic.svg" style="width: 50%")
+            div.footer 180W - Prevision : 0,9kWh
+        md-grid-tile.tile.heating.tile-red
+          div(layout="column")
+            div.highlight(flex) 3,42kWh
+            div.icon(flex)
+              img(src="assets/icons/heating.svg" style="width: 50%")
 
     // build:js ./libs.js
     script(src='../bower_components/lodash/lodash.js')

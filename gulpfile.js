@@ -12,9 +12,6 @@ const jade = require('gulp-jade');
 const sourceMaps = require('gulp-sourcemaps');
 const angularTemplatecache = require('gulp-angular-templatecache');
 const ngAnnotate = require('gulp-ng-annotate');
-const iconfont = require('gulp-iconfont');
-const consolidate = require('gulp-consolidate');
-const rename = require('gulp-rename');
 const rev = require('gulp-rev');
 const uglify = require('gulp-uglify');
 const cssnano = require('gulp-cssnano');
@@ -58,6 +55,10 @@ gulp.task('jade', () => {
     .pipe(gulp.dest(buildPath));
 });
 
+
+// Cache template files of AngularJS
+// =============================================================================
+
 gulp.task('templatecache', ['jade'], () => {
   return gulp.src([
       buildPath + '/modules/**/*.html',
@@ -74,7 +75,6 @@ gulp.task('templatecache', ['jade'], () => {
       module: 'soprismApp.templates',
       standalone: true,
       transformUrl: url => {
-        //return url.substr(url.indexOf('modules/'));
         return 'views/' + url;
       }
     }))
@@ -82,35 +82,8 @@ gulp.task('templatecache', ['jade'], () => {
 });
 
 
-// Build:Icons - Build Icons font
+// Build and compress code
 // =============================================================================
-
-gulp.task('build:icons', () => {
-  return gulp.src(srcPath + '/icons/**/*.svg')
-    .pipe(iconfont({
-      fontName: 'Icons',
-      formats: ['svg', 'ttf', 'eot', 'woff'],
-      normalize: true,
-      fontHeight: 100,
-      prependUnicode: true
-    }))
-    .on('glyphs', function(glyphs) {
-      var options = {
-        glyphs: glyphs.map(function(glyph) {
-          // this line is needed because gulp-iconfont has changed the api from 2.0
-          return { name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0) }
-        }),
-        fontName: 'Icons',
-        fontPath: '../fonts/', // set path to font (from your CSS file if relative)
-        prefix: 'icon-' // set class name in your CSS
-      };
-      gulp.src(srcPath + '/sass/templates/icons.scss.tpl')
-        .pipe(consolidate('lodash', options))
-        .pipe(rename('icons.scss'))
-        .pipe(gulp.dest(srcPath + '/sass/components'));
-    })
-    .pipe(gulp.dest(srcPath + '/assets/fonts/Icons'));
-});
 
 gulp.task('build', ['js', 'scss', 'templatecache', 'copy'], () => {
   return gulp.src(buildPath + '/index.html')
@@ -144,6 +117,10 @@ gulp.task('build', ['js', 'scss', 'templatecache', 'copy'], () => {
     }))
     .pipe(gulp.dest(buildPath));
 });
+
+
+// Copy static files to the build folder
+// =============================================================================
 
 gulp.task('copy', ['templatecache'], () => {
   return gulp.src([
